@@ -66,6 +66,7 @@
             this.btnCntClear = new System.Windows.Forms.Button();
             this.rtBoxSend = new System.Windows.Forms.RichTextBox();
             this.btnSend = new System.Windows.Forms.Button();
+            this.btn_send_test = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,7 +90,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(5, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(203, 226);
             this.groupBox1.TabIndex = 0;
@@ -209,9 +210,9 @@
             this.tSStatusLabelRxCnt,
             this.tSStatusLabelTx,
             this.tSStatusLabelTxCnt});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 427);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 588);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(715, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1049, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -315,7 +316,7 @@
             this.groupBox3.Controls.Add(this.cBoxTxRepeat);
             this.groupBox3.Controls.Add(this.rBtnTxHex);
             this.groupBox3.Controls.Add(this.rBtnTxASCII);
-            this.groupBox3.Location = new System.Drawing.Point(15, 338);
+            this.groupBox3.Location = new System.Drawing.Point(8, 257);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 74);
             this.groupBox3.TabIndex = 3;
@@ -394,9 +395,9 @@
             // 
             // rtBoxRecv
             // 
-            this.rtBoxRecv.Location = new System.Drawing.Point(230, 19);
+            this.rtBoxRecv.Location = new System.Drawing.Point(223, 12);
             this.rtBoxRecv.Name = "rtBoxRecv";
-            this.rtBoxRecv.Size = new System.Drawing.Size(473, 219);
+            this.rtBoxRecv.Size = new System.Drawing.Size(415, 145);
             this.rtBoxRecv.TabIndex = 4;
             this.rtBoxRecv.Text = "";
             // 
@@ -406,7 +407,7 @@
             // 
             // btnRxBufClear
             // 
-            this.btnRxBufClear.Location = new System.Drawing.Point(230, 389);
+            this.btnRxBufClear.Location = new System.Drawing.Point(223, 308);
             this.btnRxBufClear.Name = "btnRxBufClear";
             this.btnRxBufClear.Size = new System.Drawing.Size(75, 23);
             this.btnRxBufClear.TabIndex = 5;
@@ -416,7 +417,7 @@
             // 
             // btnTxBufClear
             // 
-            this.btnTxBufClear.Location = new System.Drawing.Point(326, 389);
+            this.btnTxBufClear.Location = new System.Drawing.Point(319, 308);
             this.btnTxBufClear.Name = "btnTxBufClear";
             this.btnTxBufClear.Size = new System.Drawing.Size(75, 23);
             this.btnTxBufClear.TabIndex = 6;
@@ -426,7 +427,7 @@
             // 
             // btnCntClear
             // 
-            this.btnCntClear.Location = new System.Drawing.Point(423, 389);
+            this.btnCntClear.Location = new System.Drawing.Point(416, 308);
             this.btnCntClear.Name = "btnCntClear";
             this.btnCntClear.Size = new System.Drawing.Size(75, 23);
             this.btnCntClear.TabIndex = 7;
@@ -436,15 +437,15 @@
             // 
             // rtBoxSend
             // 
-            this.rtBoxSend.Location = new System.Drawing.Point(230, 253);
+            this.rtBoxSend.Location = new System.Drawing.Point(223, 183);
             this.rtBoxSend.Name = "rtBoxSend";
-            this.rtBoxSend.Size = new System.Drawing.Size(473, 121);
+            this.rtBoxSend.Size = new System.Drawing.Size(415, 110);
             this.rtBoxSend.TabIndex = 8;
             this.rtBoxSend.Text = "";
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(628, 389);
+            this.btnSend.Location = new System.Drawing.Point(563, 308);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(75, 23);
             this.btnSend.TabIndex = 9;
@@ -452,11 +453,22 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
+            // btn_send_test
+            // 
+            this.btn_send_test.Location = new System.Drawing.Point(223, 360);
+            this.btn_send_test.Name = "btn_send_test";
+            this.btn_send_test.Size = new System.Drawing.Size(75, 23);
+            this.btn_send_test.TabIndex = 10;
+            this.btn_send_test.Text = "测试";
+            this.btn_send_test.UseVisualStyleBackColor = true;
+            this.btn_send_test.Click += new System.EventHandler(this.btn_send_test_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 449);
+            this.ClientSize = new System.Drawing.Size(1049, 610);
+            this.Controls.Add(this.btn_send_test);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.rtBoxSend);
             this.Controls.Add(this.btnCntClear);
@@ -523,6 +535,7 @@
         private System.Windows.Forms.Button btnCntClear;
         private System.Windows.Forms.RichTextBox rtBoxSend;
         private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Button btn_send_test;
     }
 }
 

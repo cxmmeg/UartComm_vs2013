@@ -67,7 +67,8 @@ namespace UartComm_vs2013
             cbxBaudRate.Items.Add("38400");
             cbxBaudRate.Items.Add("57600");
             cbxBaudRate.Items.Add("115200");
-            cbxBaudRate.SelectedIndex = 3;
+            //cbxBaudRate.SelectedIndex = 3;
+            cbxBaudRate.SelectedIndex = 0;//9600
 
             //列出数据位
             cbxDataBits.Items.Add("8");
@@ -359,6 +360,12 @@ namespace UartComm_vs2013
         private void cBoxTxRepeat_CheckedChanged(object sender, EventArgs e)
         {
             timerSend.Enabled = cBoxTxRepeat.Checked;
+        }
+
+        private void btn_send_test_Click(object sender, EventArgs e)
+        {
+            rtBoxSend.Text = "01 02 03 ab 1e";
+            comSend();
         }
     }
 }
